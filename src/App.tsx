@@ -2,20 +2,12 @@ import React from "react";
 import "./App.css";
 import styled from "styled-components";
 import backgr from "./backgr.jpg";
+import HeaderH1 from "./Components/Header.jsx" 
+import { ParagraphDescription } from "./Components/Paragraph.jsx"
+import { CenterImg } from "./Components/CentralImg.jsx"
 
-const Paragraph = styled.p`
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 20px;
-  color: #abb3ba;
-  text-align: center;
-`;
 
-const HeaderH1 = styled.h1`
-text-align: center;
-`
-
-const StyledBtnL = styled.button`
+const StyledBtnLeft = styled.button`
   border: none;
   background-color: hsl(147, 50%, 47%);
   color: snow;
@@ -33,7 +25,7 @@ const StyledBtnL = styled.button`
   }
 `;
 
-const StyledBtnR = styled(StyledBtnL)`
+const StyledBtnRight = styled(StyledBtnLeft)`
   background-color: yellow;
   color: #4e71fe;
   padding: 10px 38px 10px 38px;
@@ -43,6 +35,8 @@ const StyledBtnR = styled(StyledBtnL)`
     border: 2px solid #4e71fe;
   }
 `;
+
+
 const BtnContainer = styled.div`
   display: block;
  text-align: center;
@@ -52,24 +46,18 @@ const BtnContainer = styled.div`
   }
 `;
 
-const CenterImg = styled.img`
-display: block;
-margin: auto;
-width: 50vw;
-`
-
 function App() {
   return (
     <div className="App">
       <CenterImg src={backgr} alt=""/>
       <HeaderH1>Headline</HeaderH1>
-      <Paragraph>
+      <ParagraphDescription>
         Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie
         ornare in venen.
-      </Paragraph>
+      </ParagraphDescription>
       <BtnContainer>
-        <StyledBtnL>See more</StyledBtnL>
-        <StyledBtnR>Save</StyledBtnR>
+        <StyledBtnLeft>See more</StyledBtnLeft>
+        <StyledBtnRight>Save</StyledBtnRight>
       </BtnContainer>
     </div>
   );
